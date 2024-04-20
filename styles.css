@@ -1,0 +1,81 @@
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Cambiar la fuente a Arial */
+}
+
+/* Estilos para el temporizador */
+.timer {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de la lista de temas */
+.topics-container {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para la lista de temas */
+.topics-list {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los botones */
+.timer-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo específico para el botón "Agregar Tema" */
+#addTopic {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para el cuadro de texto */
+#tema {
+    padding: 10px 20px;
+    color: #000; /* Cambiar color de texto */
+    border: 2px solid #007bff; /* Añadir borde */
+    border-radius: 4px;
+}
+
+/* Estilos para el contenedor de temas guardados */
+.temas-guardados {
+    margin-top: 20px;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    border: 2px solid #ccc; /* Borde */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Estilo específico para el botón "Copiar" */
+#copy {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

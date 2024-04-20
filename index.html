@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Reunión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temporizador de Reunión</h1>
+        <div id="timer" class="timer">00:00</div>
+        <button id="startStop" class="timer-button">Comenzar</button>
+        <button id="reset" class="timer-button">Reiniciar</button>
+        <div id="topicsContainer" class="topics-container">
+            <h2>Temas de la Reunión</h2>
+            <div class="temas">
+                <label for="tema">Tema de la reunión:</label>
+                <input type="text" id="tema" placeholder="Ingrese el tema">
+                <button id="addTopic">Agregar Tema</button>
+            </div>
+        </div>
+        <ul id="topics" class="temas-guardados">
+            <!-- Aquí se mostrarán los temas ingresados -->
+        </ul>
+        <button id="copy" class="timer-button">Copiar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
