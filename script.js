@@ -63,6 +63,21 @@ function addTopic() {
         const formattedTime = formatTime(minutes, seconds);
         const listItem = document.createElement('li');
         listItem.textContent = `${topicName} - Tiempo: ${formattedTime}`;
+
+        // Crear el botón de eliminar
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '🗑️'; // Icono de tacho de basura
+        deleteButton.classList.add('delete-button');
+
+        // Escuchar evento de clic en el botón de eliminar
+        deleteButton.addEventListener('click', function() {
+            listItem.remove(); // Eliminar el tema al hacer clic en el botón de eliminar
+        });
+
+        // Agregar el botón de eliminar al elemento de la lista
+        listItem.appendChild(deleteButton);
+
+        // Agregar el tema a la lista
         topicsList.appendChild(listItem);
     } else {
         alert('Por favor ingrese un nombre de tema válido.');
@@ -83,8 +98,15 @@ function copyTopics() {
 
     // Recorrer todos los elementos <li> de la lista de temas
     for (let i = 0; i < topicsItems.length; i++) {
+        // Clonar el elemento para no modificar el DOM original
+        const listItemClone = topicsItems[i].cloneNode(true);
+        // Eliminar el ícono de la papelera del clon
+        const deleteButton = listItemClone.querySelector('.delete-button');
+        if (deleteButton) {
+            deleteButton.remove();
+        }
         // Agregar el texto del tema al texto general
-        topicsText += topicsItems[i].textContent;
+        topicsText += listItemClone.textContent;
 
         // Agregar un salto de línea después de cada tema
         topicsText += '\n';
@@ -99,3 +121,33 @@ function copyTopics() {
             console.error('Error al copiar los temas:', error);
         });
 }
+
+// Función para resetear los temas guardados
+function resetTopics() {
+    const topicsList = document.getElementById('topics');
+    topicsList.innerHTML = ''; // Eliminar todos los temas guardados
+}
+
+// Obtener referencia al botón "Resetear"
+const resetTopicsButton = document.getElementById('resetTopics');
+
+// Escuchar evento de clic en el botón "Resetear"
+resetTopicsButton.addEventListener('click', resetTopics);
+
+// Obtener referencia al botón de ayuda y al panel de ayuda
+const helpButton = document.getElementById('helpButton');
+const helpPanel = document.getElementById('helpPanel');
+
+// Escuchar evento de clic en el botón de ayuda
+helpButton.addEventListener('click', toggleHelpPanel);
+
+// Función para mostrar u ocultar el panel de ayuda
+function toggleHelpPanel() {
+    helpPanel.style.display = helpPanel.style.display === 'block' ? 'none' : 'block';
+}
+
+// Obtener referencia al botón de cerrar ayuda
+const closeHelpButton = document.getElementById('closeHelp');
+
+// Escuchar evento de clic en el botón de cerrar ayuda
+closeHelpButton.addEventListener('click', toggleHelpPanel);
