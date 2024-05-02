@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporizador de Reunión</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
+    <button id="helpButton" class="help-button">?</button>
+    <a href="Medidor_de_tiempo.apk" download="Medidor_de_tiempo"><button class="mi-boton">Descargar el Apk</button>
+    </a>
     <div class="container">
         <h1>Temporizador de Reunión</h1>
         <div id="timer" class="timer">00:00</div>
@@ -24,6 +28,22 @@
             <!-- Aquí se mostrarán los temas ingresados -->
         </ul>
         <button id="copy" class="timer-button">Copiar</button>
+        <button id="resetTopics" class="timer-button">Resetear</button> <!-- Cambiado el ID del botón -->
+    </div>
+
+    <div id="helpPanel" class="help-panel">
+        <button id="closeHelp" class="close-help-button">X</button>
+        <h2>¿Cómo usar esta web?</h2>
+        <p>
+            El Temporizador de Reunión es una herramienta simple pero efectiva para ayudarte a gestionar y organizar tus reuniones de manera más eficiente. Sigue estos pasos para sacarle el máximo provecho:
+        </p>
+        <ol>
+            <li><strong>Comenzar y Detener el Temporizador:</strong> Para iniciar el temporizador, haz clic en el botón "Comenzar". El temporizador comenzará a contar el tiempo transcurrido desde cero. Para detener el temporizador, haz clic en el botón "Detener". Esto te permite pausar el tiempo cuando sea necesario durante tu reunión.</li>
+            <li><strong>Reiniciar el Temporizador:</strong> Si necesitas reiniciar el temporizador para comenzar de nuevo, simplemente haz clic en el botón "Reiniciar". Esto establecerá el temporizador de nuevo a cero y podrás empezar de nuevo desde el principio.</li>
+            <li><strong>Agregar Temas de la Reunión:</strong> Utiliza el campo de texto debajo de "Temas de la Reunión" para ingresar los temas que serán discutidos durante la reunión. Después de ingresar un tema, haz clic en "Agregar Tema" para añadirlo a la lista. Cada tema será mostrado con su respectivo tiempo transcurrido desde el inicio de la reunión.</li>
+            <li><strong>Copiar Temas de la Reunión:</strong> Cuando la reunión haya finalizado y desees guardar los temas discutidos, haz clic en el botón "Copiar". Esto copiará todos los temas de la reunión al portapapeles, lo que te permitirá pegarlos fácilmente en un documento de registro o enviarlos por correo electrónico a los participantes.</li>
+            <li><strong>Descargar la Aplicación:</strong> Si deseas utilizar el temporizador de manera rápida y conveniente desde tu dispositivo móvil, también tienes la opción de descargar la aplicación haciendo clic en el botón "Descargar el Apk". Esto te permite acceder al temporizador en cualquier momento y lugar.</li>
+        </ol>
     </div>
 
     <script src="script.js"></script>
