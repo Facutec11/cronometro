@@ -56,16 +56,34 @@
     border-radius: 4px;
 }
 
-/* Estilos para el contenedor de temas guardados */
 .temas-guardados {
+    position: relative; /* Establecemos la posición relativa */
     margin-top: 20px;
-    padding: 20px; /* Ajusta el relleno según sea necesario */
-    background-color: #f0f0f0; /* Color de fondo gris claro */
-    border: 2px solid #ccc; /* Borde */
-    border-radius: 8px; /* Borde redondeado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-bottom: 10px;
+    overflow: hidden; /* Para que el contenido no se desborde */
+}
+
+/* Estilos para el botón de eliminar */
+.delete-button {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Lo posicionamos en el 50% del contenedor verticalmente */
+    right: 0; /* Lo posicionamos en el borde derecho */
+    transform: translateY(-50%); /* Lo desplazamos hacia arriba la mitad de su altura */
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #999;
+    cursor: pointer;
+}
+
+.delete-button.hidden {
+    display: none;
 }
 
 /* Estilo específico para el botón "Copiar" */
@@ -79,3 +97,69 @@
     cursor: pointer;
 }
 
+.mi-boton {
+    background-color: #007bff; /* Color de fondo */
+    border: none; /* Quita el borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: left; /* Alineación del texto */
+    text-decoration: none; /* Quita la subrayado del texto */
+    display: inline-block; /* Hace que el botón se comporte como un bloque */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 4px 2px; /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px; /* Añade bordes redondeados */
+  }
+  
+  /* Estilos para el botón de ayuda */
+.help-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Estilos para el panel de ayuda */
+.help-panel {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    max-height: 80vh;
+    width: 90%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .help-panel {
+        width: 90%; /* Porcentaje del ancho de la ventana */
+        max-width: none; /* Elimina el ancho máximo */
+    }
+}
+
+/* Estilos para el botón de cerrar ayuda */
+.close-help-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
