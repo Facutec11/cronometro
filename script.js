@@ -151,3 +151,35 @@ const closeHelpButton = document.getElementById('closeHelp');
 
 // Escuchar evento de clic en el botón de cerrar ayuda
 closeHelpButton.addEventListener('click', toggleHelpPanel);
+
+// Obtener referencia al botón de abrir el otro panel
+const openOtherPanelButton = document.getElementById('openOtherPanel');
+
+// Obtener referencia al otro panel y al botón de cerrar
+const otherPanel = document.getElementById('otherPanel');
+const closeOtherPanelButton = document.getElementById('closeOtherPanel');
+
+// Escuchar evento de clic en el botón de abrir el otro panel
+openOtherPanelButton.addEventListener('click', () => {
+    otherPanel.style.display = 'block';
+});
+
+// Escuchar evento de clic en el botón de cerrar el otro panel
+closeOtherPanelButton.addEventListener('click', () => {
+    otherPanel.style.display = 'none';
+});
+
+// Obtener referencias a los botones dentro del otro panel
+const downloadApk1Button = document.getElementById('downloadApk1');
+const downloadApk2Button = document.getElementById('downloadApk2');
+
+// Escuchar eventos de clic en los botones dentro del otro panel
+downloadApk1Button.addEventListener('click', () => {
+    // Acción al hacer clic en el botón para descargar Apk 1
+    alert('Descargando Apk 1...');
+});
+
+downloadApk2Button.addEventListener('click', () => {
+    // Acción al hacer clic en el botón para descargar Apk 2
+    alert('Descargando Apk 2...');
+});
