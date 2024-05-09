@@ -3,7 +3,8 @@
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    font-family: Arial, sans-serif; /* Cambiar la fuente a Arial */
+    font-family: Arial, sans-serif;
+    /* Cambiar la fuente a Arial */
 }
 
 /* Estilos para el temporizador */
@@ -51,13 +52,16 @@
 /* Estilos para el cuadro de texto */
 #tema {
     padding: 10px 20px;
-    color: #000; /* Cambiar color de texto */
-    border: 2px solid #007bff; /* Añadir borde */
+    color: #000;
+    /* Cambiar color de texto */
+    border: 2px solid #007bff;
+    /* Añadir borde */
     border-radius: 4px;
 }
 
 .temas-guardados {
-    position: relative; /* Establecemos la posición relativa */
+    position: relative;
+    /* Establecemos la posición relativa */
     margin-top: 20px;
     padding: 20px;
     background-color: #f0f0f0;
@@ -66,15 +70,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-bottom: 10px;
-    overflow: hidden; /* Para que el contenido no se desborde */
+    overflow: hidden;
+    /* Para que el contenido no se desborde */
 }
 
 /* Estilos para el botón de eliminar */
 .delete-button {
-    position: absolute; /* Posicionamiento absoluto */
-    top: 50%; /* Lo posicionamos en el 50% del contenedor verticalmente */
-    right: 0; /* Lo posicionamos en el borde derecho */
-    transform: translateY(-50%); /* Lo desplazamos hacia arriba la mitad de su altura */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    top: 50%;
+    /* Lo posicionamos en el 50% del contenedor verticalmente */
+    right: 0;
+    /* Lo posicionamos en el borde derecho */
+    transform: translateY(-50%);
+    /* Lo desplazamos hacia arriba la mitad de su altura */
     background: none;
     border: none;
     font-size: 1.2em;
@@ -98,20 +107,85 @@
 }
 
 .mi-boton {
-    background-color: #007bff; /* Color de fondo */
-    border: none; /* Quita el borde */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
-    text-align: left; /* Alineación del texto */
-    text-decoration: none; /* Quita la subrayado del texto */
-    display: inline-block; /* Hace que el botón se comporte como un bloque */
-    font-size: 16px; /* Tamaño del texto */
-    margin: 4px 2px; /* Margen exterior (arriba/abajo, izquierda/derecha) */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border-radius: 4px; /* Añade bordes redondeados */
-  }
-  
-  /* Estilos para el botón de ayuda */
+    background-color: #007bff;
+    /* Color de fondo */
+    border: none;
+    /* Quita el borde */
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Quita la subrayado del texto */
+    display: inline-block;
+    /* Hace que el botón se comporte como un bloque */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin: 4px 2px;
+    /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Añade bordes redondeados */
+}
+
+.close-buton {
+    background-color: transparent;
+    /* Color de fondo */
+    border: 2px solid #ccc;
+    /* Quita el borde */
+    color: rgb(0, 0, 0);
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Quita la subrayado del texto */
+    display: inline-block;
+    /* Hace que el botón se comporte como un bloque */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin: 4px 2px;
+    /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Añade bordes redondeados */
+}
+
+.close {
+    margin-top: 10px;
+}
+
+.abrir-boton {
+    background-color: #007bff;
+    /* Color de fondo */
+    border: none;
+    /* Quita el borde */
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Quita la subrayado del texto */
+    display: inline-block;
+    /* Hace que el botón se comporte como un bloque */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin: 4px 2px;
+    /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Añade bordes redondeados */
+}
+
+/* Estilos para el botón de ayuda */
 .help-button {
     position: fixed;
     top: 20px;
@@ -146,8 +220,10 @@
 
 @media (max-width: 768px) {
     .help-panel {
-        width: 90%; /* Porcentaje del ancho de la ventana */
-        max-width: none; /* Elimina el ancho máximo */
+        width: 90%;
+        /* Porcentaje del ancho de la ventana */
+        max-width: none;
+        /* Elimina el ancho máximo */
     }
 }
 
@@ -162,4 +238,37 @@
     background-color: transparent;
     color: #333;
     cursor: pointer;
+}
+
+/* Estilos para los botones dentro del panel */
+.panel button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.d-panel {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    max-height: 80vh;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .d-panel {
+        width: 90%;
+        /* Porcentaje del ancho de la ventana */
+        max-width: none;
+        /* Elimina el ancho máximo */
+    }
 }
