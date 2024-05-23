@@ -78,7 +78,7 @@
 .delete-button {
     position: absolute;
     /* Posicionamiento absoluto */
-    top: 50%;
+    top: 80%;
     /* Lo posicionamos en el 50% del contenedor verticalmente */
     right: 0;
     /* Lo posicionamos en el borde derecho */
@@ -271,4 +271,126 @@
         max-width: none;
         /* Elimina el ancho máximo */
     }
+}
+
+.temas {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.temas-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.select-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.select-container select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px; /* Separación entre el select y el botón */
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+.add-topic-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+}
+
+/* Estilos para el recuadro de confirmación */
+.confirmation-panel {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    max-height: 80vh;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .confirmation-panel {
+        width: 90%;
+        /* Porcentaje del ancho de la ventana */
+        max-width: none;
+        /* Elimina el ancho máximo */
+    }
+}
+
+/* Estilos para los botones de confirmación */
+.confirm-reset-yes {
+    background-color: #ff0000;
+    /* Color de fondo */
+    border: none;
+    /* Quita el borde */
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Quita la subrayado del texto */
+    display: inline-block;
+    /* Hace que el botón se comporte como un bloque */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin: 4px 2px;
+    /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Añade bordes redondeados */
+}
+
+.confirm-reset-no {
+    background-color: #CCC;
+    /* Color de fondo */
+    border: none;
+    /* Quita el borde */
+    color: black;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Quita la subrayado del texto */
+    display: inline-block;
+    /* Hace que el botón se comporte como un bloque */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin: 4px 2px;
+    /* Margen exterior (arriba/abajo, izquierda/derecha) */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px;
+    /* Añade bordes redondeados */
+    margin-left: 10px;
+}
+
+.accions {
+    margin-top: 20px;
 }
