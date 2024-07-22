@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://facutec11.github.io/cronometro/sitemap.xml
